@@ -471,19 +471,116 @@ transform: rotate(90deg); transform-origin: left bottom;}
 
 /* redroom------------------------------------------------------------------------------------------ */
 /*before_ctnBox*/
-#before_ctnBox{width: 100%; height: 846px; margin: 94px auto 200px;}
-#before_ctnBox .bg {position: relative; width: 100%; height: 100%; background: url("../images/redroom/Before01.jpg") no-repeat center top;}
-#before_ctnBox .bg .area{position: relative; width: 1224px; height: 100%; margin: 0 auto;}
-#before_ctnBox .bg .area .soon {position: absolute; bottom: 50%; margin-top:92PX; }
-#before_ctnBox .bg .area .soon .date, #before_ctnBox .bg .area .soon .come{font-family: NotoS;}
-#before_ctnBox .bg .area .soon .date {font-size: 30px; letter-spacing: 7px; text-align: center;}
-#before_ctnBox .bg .area .soon .main {font-size: 80px; font-family: Neo;}
-#before_ctnBox .bg .area .soon .come {font-size: 37px; letter-spacing: 17px;}
-#before_ctnBox .bg .area .title {position: absolute; bottom: 30px; left: 50%; margin-left: -200px; font-size: 30px;  letter-spacing:2px;
-    font-family: 'Chosunilbo_myungjo';}
-#before_ctnBox .bg .onair { display: block; position: absolute; left:50%; margin-left: -457px; top: 440px; font-family: NotoS; font-size: 18px; 
-    padding: 5px 10px; border: 3px solid #fff; border-radius: 20px; z-index: 100; opacity: 0.5; transition: all 0.3s;} 
-#before_ctnBox .bg .onair:hover{opacity: 1;}
+#before_ctnBox {
+    width: 100%;
+    height: 846px;
+    margin: 94px auto 200px;
+}
+
+#before_ctnBox .bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../images/redroom/Before01.jpg") no-repeat center top;
+}
+
+#before_ctnBox .bg .area {
+    position: relative;
+    width: 1224px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#before_ctnBox .bg .area .soon {
+    position: absolute;
+    bottom: 50%;
+    margin-top: 92PX;
+}
+
+#before_ctnBox .bg .area .soon .date,
+#before_ctnBox .bg .area .soon .come {
+    font-family: NotoS;
+}
+
+#before_ctnBox .bg .area .soon .date {
+    font-size: 30px;
+    letter-spacing: 7px;
+    text-align: center;
+}
+
+#before_ctnBox .bg .area .soon .main {
+    font-size: 80px;
+    font-family: Neo;
+}
+
+#before_ctnBox .bg .area .soon .come {
+    font-size: 37px;
+    letter-spacing: 17px;
+}
+
+#before_ctnBox .bg .area .title {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'Chosunilbo_myungjo';
+}
+
+#before_ctnBox .bg #box {
+    position: absolute;
+    left: 50%;
+    margin-left: -457px;
+    top: 440px;
+    width: 120px;
+    height: 35px;
+    font-family: NotoS;
+    font-size: 18px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+#before_ctnBox .bg #box>a {
+    display: block;
+    text-align: center;
+    line-height: 35px;
+}
+
+.gradient-border {
+    --borderWidth: 3px;
+    border-radius: var(--borderWidth);
+    position: relative;
+}
+
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(90deg, #220051, #220051, #220051, #5f0202, #5f0202, #5f0202);
+    border-radius: calc(5 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease infinite;
+    background-size: 300% 300%
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 /*after_ctnBox*/
